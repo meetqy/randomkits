@@ -19,10 +19,7 @@
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo run typecheck",
     "ui-add": "turbo run ui-add",
-    "pkg-add": "turbo generate",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "release": "turbo run build --filter=nextjs^... && changeset publish"
+    "pkg-add": "turbo generate"
   },
   "devDependencies": {
     "@randomkits/prettier-config": "workspace:*",
