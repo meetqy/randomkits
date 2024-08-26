@@ -9,7 +9,7 @@ export default function HomePage() {
       {data.map((item) => (
         <div key={item.name}>
           <h1>{item.name}</h1>
-          <p>{item.type}</p>
+          <p>{item.element}</p>
           <img src={getAssetsSrc("genshin-impact-character", item.name)} />
         </div>
       ))}

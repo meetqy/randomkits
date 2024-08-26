@@ -17,3 +17,6 @@ export const getAssetsSrc = (kit: string, name: string) => {
 export function randoms<T>(arr: T[], num: number) {
   return sampleSize(arr, num);
 }
+
+export const formatId = (id: string) =>
+  slugify(id, { lower: true, remove: /[*+~.()'"!:@]/g });
