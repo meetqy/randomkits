@@ -1,7 +1,17 @@
 import { randoms } from "@randomkits/utils";
 
-import data from "../assets/data.json";
+import en from "../assets/data/en.json";
 
-export const getRandom = ({ num }: { num: number; type?: string[] }) => {
-  return randoms(data, num);
+const GenshinImpactCharacter = {
+  locale: {
+    en,
+  },
+
+  random({ num = 6, language = "en" }: { num?: number; language: "en" }) {
+    const data = this.locale[language];
+
+    return randoms(data, num);
+  },
 };
+
+export default GenshinImpactCharacter;

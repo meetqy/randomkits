@@ -78,9 +78,15 @@ importers:
 
   apps/nextjs:
     dependencies:
+      '@randomkits/genshin-impact-character':
+        specifier: workspace:*
+        version: link:../../kits/genshin-impact-character
       '@randomkits/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@randomkits/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       '@t3-oss/env-nextjs':
         specifier: ^0.11.0
         version: 0.11.0(typescript@5.5.4)(zod@3.23.8)
