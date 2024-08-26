@@ -25,3 +25,7 @@ In the turbo/generators/templates directory, you can modify the preset templates
 ```sh
 pnpm ui-add {component}
 ```
+
+## Date Rules
+
+- image format => `256x256`/`.webp`, image src => `Utils.getImageSrc(field name)`
