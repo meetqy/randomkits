@@ -1,0 +1,5 @@
+---
+"@randomkits/pokemon": patch
+---
+
+patch
