@@ -1,8 +1,18 @@
 {
   "name": "@randomkits/genshin-impact-character",
+  "description": "Random Kits - Random Genshin Impact Character Generator Data Module And Random Function.",
   "private": false,
   "version": "0.0.2",
   "type": "module",
+  "author": "meetqy <meetqy@icloud.com>",
+  "homepage": "https://randomkits.com",
+  "bugs": {
+    "url": "https://github.com/meetqy/randomkits/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetqy/randomkits.git"
+  },
   "files": [
     "dist/**",
     "assets/**"
