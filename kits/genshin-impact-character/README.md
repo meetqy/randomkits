@@ -69,14 +69,18 @@ Get Random Genshin Impact Character.
 - zh-Hans (Simplified Chinese)
 - zh-Hant (Traditional Chinese)
 
-## Online Examples
-
-- [random genshin impact character](https://randomkits.com/kit/random-genshin-impact-character/)
-
 ## Issues
 
 Github issues: https://github.com/meetqy/randomkits/issues
 
-## Other Random Kits Packages
+---
 
+## Examples
+
+- [random genshin impact character generator](https://randomkits.com/kit/random-genshin-impact-character-generator/)
+- [random pokemon generator](https://randomkits.com/kit/random-pokemon-generator/)
+
+## Packages
+
+- [@randomkits/genshin-impact-character](https://www.npmjs.com/package/@randomkits/genshin-impact-character)
 - [@randomkits/pokemon](https://www.npmjs.com/package/@randomkits/pokemon)
