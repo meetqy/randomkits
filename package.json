@@ -21,7 +21,8 @@
     "ui-add": "turbo run ui-add",
     "pkg-add": "turbo generate",
     "changeset": "changeset",
-    "version-packages": "changeset version && changeset publish"
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=nextjs^... && changeset publish"
   },
   "devDependencies": {
     "@randomkits/prettier-config": "workspace:*",
