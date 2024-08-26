@@ -19,7 +19,8 @@
     "postinstall": "pnpm lint:ws",
     "typecheck": "turbo run typecheck",
     "ui-add": "turbo run ui-add",
-    "pkg-add": "turbo generate"
+    "pkg-add": "turbo generate",
+    "publish-packages": "turbo run build lint && changeset version && changeset publish"
   },
   "devDependencies": {
     "@randomkits/prettier-config": "workspace:*",
