@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "type": "module",
   "files": [
-    "dist/**"
+    "dist/**",
+    "assets/**"
   ],
   "exports": {
     ".": "./src/index.ts"
