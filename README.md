@@ -23,5 +23,5 @@ In the turbo/generators/templates directory, you can modify the preset templates
 ### How to add `shadcn/ui` components
 
 ```sh
-pnpm add-ui {components}
+pnpm ui-add {component}
 ```

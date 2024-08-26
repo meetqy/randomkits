@@ -10,8 +10,14 @@ interface PackageJson {
 
 export default function generator(plop: PlopTypes.NodePlopAPI): void {
   plop.setGenerator("init", {
-    description: "Generate a new package for the Acme Monorepo",
+    description: "Generate a new package for the RandomKits Monorepo",
     prompts: [
+      {
+        type: "list",
+        name: "dir",
+        message: "Choose directory?",
+        choices: ["kits", "packages"],
+      },
       {
         type: "input",
         name: "name",
@@ -36,27 +42,27 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: "add",
-        path: "packages/{{ name }}/eslint.config.js",
+        path: "{{dir}}/{{ name }}/eslint.config.js",
         templateFile: "templates/eslint.config.js.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/package.json",
+        path: "{{dir}}/{{ name }}/package.json",
         templateFile: "templates/package.json.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/tsconfig.json",
+        path: "{{dir}}/{{ name }}/tsconfig.json",
         templateFile: "templates/tsconfig.json.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/src/index.ts",
+        path: "{{dir}}/{{ name }}/src/index.ts",
         template: "export const name = '{{ name }}';",
       },
       {
         type: "modify",
-        path: "packages/{{ name }}/package.json",
+        path: "{{dir}}/{{ name }}/package.json",
         async transform(content, answers) {
           if ("deps" in answers && typeof answers.deps === "string") {
             const pkg = JSON.parse(content) as PackageJson;
@@ -78,13 +84,18 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         /**
          * Install deps and format everything
          */
-        if ("name" in answers && typeof answers.name === "string") {
+        if (
+          "name" in answers &&
+          typeof answers.name === "string" &&
+          "dir" in answers &&
+          typeof answers.dir === "string"
+        ) {
           // execSync("pnpm dlx sherif@latest --fix", {
           //   stdio: "inherit",
           // });
           execSync("pnpm i", { stdio: "inherit" });
           execSync(
-            `pnpm prettier --write packages/${answers.name}/** --list-different`,
+            `pnpm prettier --write ${answers.dir}/${answers.name}/** --list-different`,
           );
           return "Package scaffolded";
         }

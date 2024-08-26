@@ -31,15 +31,11 @@
     "//#clean": {
       "cache": false
     },
-    "push": {
+    "ui-add": {
       "cache": false,
       "interactive": true
     },
-    "studio": {
-      "cache": false,
-      "persistent": true
-    },
-    "ui-add": {
+    "pkg-add": {
       "cache": false,
       "interactive": true
     }
