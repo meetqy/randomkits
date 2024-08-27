@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { ProxyAgent, setGlobalDispatcher } from "undici";
 
 import { cn } from "@randomkits/ui";
 import { ThemeProvider, ThemeToggle } from "@randomkits/ui/theme";
@@ -12,6 +13,10 @@ import "~/app/globals.css";
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 import { env } from "~/env";
+
+if (process.env.NODE_ENV === "development") {
+  setGlobalDispatcher(new ProxyAgent("http://127.0.0.1:7890"));
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(

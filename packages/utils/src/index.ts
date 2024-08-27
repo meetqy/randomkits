@@ -1,6 +1,8 @@
 import { sampleSize } from "lodash-es";
 import slugify from "slugify";
 
+const host = `https://raw.githubusercontent.com/meetqy/randomkits/main/kits`;
+
 /**
  * Get the github raw url of the kit
  * @param kit kit name
@@ -11,7 +13,19 @@ export const getAssetsSrc = (kit: string, name: string) => {
   kit = formatTextToSlugify(kit);
   name = formatTextToSlugify(name);
 
-  return `https://raw.githubusercontent.com/meetqy/randomkits/main/kits/${kit}/assets/images/${name}.webp`;
+  return `${host}/${kit}/assets/images/${name}.webp`;
+};
+
+export const getReadmeSrc = (kit: string) => {
+  kit = formatTextToSlugify(kit);
+
+  return `${host}/${kit}/README.md`;
+};
+
+export const getChangelogSrc = (kit: string) => {
+  kit = formatTextToSlugify(kit);
+
+  return `${host}/${kit}/CHANGELOG.md`;
 };
 
 export function randoms<T>(arr: T[], num: number) {

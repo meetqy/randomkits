@@ -19,7 +19,7 @@ export default function Dashboard() {
       <div className="sm:columns-2 sm:text-[0] lg:columns-3">
         {kits.map((item) => {
           const name = `Random ${item} Generator`;
-          const slug = `/kit/${name.replace(/ /g, "-").toLowerCase()}`;
+          const slug = `/kit/${item.replace(/ /g, "-").toLowerCase()}`;
           const description = `Instantly generate a random ${item} with just one click!`;
 
           return (

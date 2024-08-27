@@ -1,6 +1,10 @@
 import { Metadata } from "next";
+import { MDXRemote } from "next-mdx-remote/rsc";
+
+import { getReadmeSrc } from "@randomkits/utils";
 
 import KitLayout from "~/components/kit-layout";
+import ReadmeMDX from "./readme.mdx";
 
 const name = "Genshin Impact Character";
 
@@ -9,13 +13,18 @@ export const metadata: Metadata = {
   description: `Instantly generate a random ${name} with just one click!`,
 };
 
-export default function GenshinImpactCharacterPage() {
+export default async function GenshinImpactCharacterPage() {
+  const res = await fetch(getReadmeSrc(name));
+  const readme = await res.text();
+  console.log(readme);
+
   return (
     <KitLayout
       title={name}
       readme={
         <>
-          <h1>这是一段 README</h1>
+          <ReadmeMDX />
+          <MDXRemote source={""} />
         </>
       }
     >
