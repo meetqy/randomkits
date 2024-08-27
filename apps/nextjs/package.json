@@ -14,6 +14,9 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.0.1",
+    "@mdx-js/react": "^3.0.1",
+    "@next/mdx": "^14.2.6",
     "@next/third-parties": "^14.2.6",
     "@randomkits/genshin-impact-character": "workspace:*",
     "@randomkits/ui": "workspace:*",
@@ -27,6 +30,7 @@
     "next": "^14.2.5",
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
+    "remark-gfm": "^4.0.0",
     "superjson": "2.2.1",
     "zod": "catalog:"
   },
@@ -36,6 +40,7 @@
     "@randomkits/prettier-config": "workspace:*",
     "@randomkits/tailwind-config": "workspace:*",
     "@randomkits/tsconfig": "workspace:*",
+    "@types/mdx": "^2.0.13",
     "@types/node": "^20.14.15",
     "@types/react": "catalog:react18",
     "@types/react-dom": "catalog:react18",

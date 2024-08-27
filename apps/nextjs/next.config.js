@@ -1,7 +1,12 @@
-// Import env files to validate at build time. Use jiti so we can load .ts files in here.
+import createMDX from "@next/mdx";
+import remarkGfm from "remark-gfm";
 
 /** @type {import("next").NextConfig} */
-const config = {
+const nextConfig = {
+  crossOrigin: "anonymous",
+  images: {
+    domains: ["*.github.com"],
+  },
   reactStrictMode: true,
 
   /** Enables hot reloading for local packages without a build step */
@@ -12,4 +17,11 @@ const config = {
   typescript: { ignoreBuildErrors: true },
 };
 
-export default config;
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [],
+  },
+});
+
+export default withMDX(nextConfig);
