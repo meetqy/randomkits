@@ -4,6 +4,13 @@
   "private": false,
   "version": "0.0.2",
   "type": "module",
+  "keywords": [
+    "random",
+    "randomkits",
+    "random kits",
+    "generator",
+    "genshin impact character"
+  ],
   "author": "meetqy <meetqy@icloud.com>",
   "homepage": "https://randomkits.com",
   "bugs": {
