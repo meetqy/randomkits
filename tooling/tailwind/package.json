@@ -23,6 +23,7 @@
     "@randomkits/eslint-config": "workspace:*",
     "@randomkits/prettier-config": "workspace:*",
     "@randomkits/tsconfig": "workspace:*",
+    "@tailwindcss/typography": "^0.5.14",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
