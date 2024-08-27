@@ -1,5 +1,11 @@
 # @randomkits/genshin-impact-character
 
+## 0.0.3
+
+### Patch Changes
+
+- 6aa33e8: 0.0.3
+
 ## 0.0.2
 
 ### Patch Changes
