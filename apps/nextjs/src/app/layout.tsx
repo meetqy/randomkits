@@ -1,12 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { cn } from "@randomkits/ui";
-import { ThemeProvider, ThemeToggle } from "@randomkits/ui/theme";
-import { Toaster } from "@randomkits/ui/toast";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
+import { cn } from "@randomkits/ui";
+import { ThemeProvider, ThemeToggle } from "@randomkits/ui/theme";
+import { Toaster } from "@randomkits/ui/toast";
+
 import "~/app/globals.css";
 
+import { Footer } from "~/components/footer";
+import { Navbar } from "~/components/navbar";
 import { env } from "~/env";
 
 export const metadata: Metadata = {
@@ -48,10 +51,15 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {props.children}
-          <div className="absolute bottom-4 right-4">
+          <Navbar />
+          <div className="flex-1 bg-muted/40">
+            <main className="container py-8">{props.children}</main>
+          </div>
+          <Footer />
+          <div className="fixed bottom-4 right-4">
             <ThemeToggle />
           </div>
+
           <Toaster />
         </ThemeProvider>
       </body>

@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@randomkits/genshin-impact-character": "workspace:*",
-    "@randomkits/utils": "workspace:*",
     "@randomkits/ui": "workspace:*",
+    "@randomkits/utils": "workspace:*",
     "@t3-oss/env-nextjs": "^0.11.0",
     "@tanstack/react-query": "catalog:",
     "@trpc/client": "catalog:",
@@ -30,6 +30,7 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@iconify/react": "^5.0.2",
     "@randomkits/eslint-config": "workspace:*",
     "@randomkits/prettier-config": "workspace:*",
     "@randomkits/tailwind-config": "workspace:*",
