@@ -2,7 +2,7 @@
   "name": "@randomkits/genshin-impact-character",
   "description": "Random Kits - Random Genshin Impact Character Generator Data Module And Random Function.",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "keywords": [
     "random",
