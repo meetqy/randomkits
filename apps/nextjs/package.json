@@ -14,6 +14,7 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.6",
     "@randomkits/genshin-impact-character": "workspace:*",
     "@randomkits/ui": "workspace:*",
     "@randomkits/utils": "workspace:*",

@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 
@@ -45,7 +46,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans text-foreground antialiased",
+          "flex min-h-screen flex-col bg-background font-sans text-foreground antialiased",
           GeistSans.variable,
           GeistMono.variable,
         )}
@@ -62,6 +63,8 @@ export default function RootLayout(props: { children: React.ReactNode }) {
 
           <Toaster />
         </ThemeProvider>
+
+        <GoogleAnalytics gaId="G-WXBWZ34FTM" />
       </body>
     </html>
   );
