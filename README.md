@@ -2,6 +2,8 @@
 
 A random generator with preset scenarios to help you overcome choice anxiety.
 
+> Online Example: [RandomKits](https://randomkits.com) - Can’t Decide? Try Random Kits!
+
 ## Developer
 
 ### How to publish to npm
