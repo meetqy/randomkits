@@ -17,10 +17,13 @@ pnpm add @randomkits/genshin-impact-character
 ## Interface
 
 ```ts
-type GenshinImpactCharacter {
+interface GenshinImpactCharacter {
   name: string;
   element: string;
-  avatar: string; // github assets url
+  // element language text
+  elementText: string;
+  // github assets url
+  avatar: string;
   id: stirng;
 }
 ```

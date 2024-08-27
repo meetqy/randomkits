@@ -8,8 +8,8 @@ import slugify from "slugify";
  * @returns github raw url
  */
 export const getAssetsSrc = (kit: string, name: string) => {
-  kit = slugify(kit, { lower: true, remove: /[*+~.()'"!:@]/g });
-  name = slugify(name, { lower: true, remove: /[*+~.()'"!:@]/g });
+  kit = formatTextToSlugify(kit);
+  name = formatTextToSlugify(name);
 
   return `https://raw.githubusercontent.com/meetqy/randomkits/main/kits/${kit}/assets/images/${name}.webp`;
 };
@@ -18,5 +18,5 @@ export function randoms<T>(arr: T[], num: number) {
   return sampleSize(arr, num);
 }
 
-export const formatId = (id: string) =>
-  slugify(id, { lower: true, remove: /[*+~.()'"!:@]/g });
+export const formatTextToSlugify = (text: string) =>
+  slugify(text, { lower: true, remove: /[*+~.()'"!:@]/g });

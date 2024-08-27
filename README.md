@@ -30,4 +30,4 @@ pnpm ui-add {component}
 
 ## Date Rules
 
-- image format => `256x256`/`.webp`, image src => `Utils.getImageSrc(field name)`
+- image format => `256x256`/`.webp`, image src => `Utils.getAssetsSrc(id)`

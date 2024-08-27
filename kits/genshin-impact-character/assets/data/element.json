@@ -1,0 +1,29 @@
+{
+  "en": {
+    "anemo": "Anemo",
+    "cryo": "Cryo",
+    "dendro": "Dendro",
+    "electro": "Electro",
+    "geo": "Geo",
+    "hydro": "Hydro",
+    "pyro": "Pyro"
+  },
+  "zh-hans": {
+    "anemo": "风",
+    "cryo": "冰",
+    "dendro": "草",
+    "electro": "雷",
+    "geo": "岩",
+    "hydro": "水",
+    "pyro": "火"
+  },
+  "zh-hant": {
+    "anemo": "風",
+    "cryo": "冰",
+    "dendro": "草",
+    "electro": "雷",
+    "geo": "岩",
+    "hydro": "水",
+    "pyro": "火"
+  }
+}
