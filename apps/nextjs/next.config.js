@@ -1,4 +1,8 @@
 import createMDX from "@next/mdx";
+import javascript from "highlight.js/lib/languages/javascript";
+import shell from "highlight.js/lib/languages/shell";
+import typescript from "highlight.js/lib/languages/typescript";
+import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 
 /** @type {import("next").NextConfig} */
@@ -20,7 +24,9 @@ const nextConfig = {
 const withMDX = createMDX({
   options: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
+    rehypePlugins: [
+      [rehypeHighlight, { languages: { javascript, typescript, shell } }],
+    ],
   },
 });
 

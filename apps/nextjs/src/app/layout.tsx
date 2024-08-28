@@ -14,6 +14,7 @@ import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
 import { env } from "~/env";
 
+// proxy agent for development
 if (process.env.NODE_ENV === "development") {
   setGlobalDispatcher(new ProxyAgent("http://127.0.0.1:7890"));
 }
@@ -49,6 +50,12 @@ export const viewport: Viewport = {
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
+        ></link>
+      </head>
       <body
         className={cn(
           "flex min-h-screen flex-col bg-background font-sans text-foreground antialiased",

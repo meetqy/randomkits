@@ -31,6 +31,7 @@
     "next-mdx-remote": "^5.0.0",
     "react": "catalog:react18",
     "react-dom": "catalog:react18",
+    "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
     "superjson": "2.2.1",
     "undici": "^6.19.8",

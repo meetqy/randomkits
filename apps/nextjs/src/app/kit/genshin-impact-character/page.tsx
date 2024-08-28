@@ -24,7 +24,7 @@ export default async function GenshinImpactCharacterPage() {
       readme={
         <>
           <ReadmeMDX />
-          <MDXRemote source={""} />
+          {/* <MDXRemote source={readme} /> */}
         </>
       }
     >

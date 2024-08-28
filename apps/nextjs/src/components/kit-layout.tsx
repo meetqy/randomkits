@@ -20,7 +20,7 @@ export default function KitLayout({
       </div>
 
       <div className="mt-8 rounded-md border bg-background px-4 py-8 lg:px-8">
-        <article className="prose prose-rose prose-h2:border-b prose-h2:pb-2 max-w-full">
+        <article className="prose prose-rose max-w-full prose-h2:border-b prose-h2:pb-2">
           {readme}
         </article>
       </div>

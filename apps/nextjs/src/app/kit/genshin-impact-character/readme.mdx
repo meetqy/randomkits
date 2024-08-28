@@ -6,7 +6,7 @@ Random get genshin impact character data, The data is a JSON file and can be use
 
 ## Install
 
-```sh
+```shell
 npm install @randomkits/genshin-impact-character
 
 yarn add @randomkits/genshin-impact-character
@@ -72,11 +72,11 @@ Get Random Genshin Impact Character.
 - zh-Hans (Simplified Chinese)
 - zh-Hant (Traditional Chinese)
 
+---
+
 ## Issues
 
-Github issues: https://github.com/meetqy/randomkits/issues
-
----
+[Github Issues](https://github.com/meetqy/randomkits/issues)
 
 ## Examples
 
