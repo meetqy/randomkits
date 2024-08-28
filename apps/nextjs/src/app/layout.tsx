@@ -12,6 +12,7 @@ import "~/app/globals.css";
 
 import { Footer } from "~/components/footer";
 import { Navbar } from "~/components/navbar";
+import { siteConfig } from "~/config/siteConfig";
 import { env } from "~/env";
 
 // proxy agent for development
@@ -22,21 +23,24 @@ if (process.env.NODE_ENV === "development") {
 export const metadata: Metadata = {
   metadataBase: new URL(
     env.VERCEL_ENV === "production"
-      ? "https://turbo.t3.gg"
+      ? "https://randomkits.com"
       : "http://localhost:3000",
   ),
-  title: "Create T3 Turbo",
-  description: "Simple monorepo with shared backend for web & mobile apps",
+  title: {
+    template: `%s | ${siteConfig.name}`,
+    default: `${siteConfig.name} - ${siteConfig.slogen}`,
+  },
+  description: siteConfig.description,
   openGraph: {
-    title: "Create T3 Turbo",
-    description: "Simple monorepo with shared backend for web & mobile apps",
-    url: "https://create-t3-turbo.vercel.app",
-    siteName: "Create T3 Turbo",
+    title: `${siteConfig.name} - ${siteConfig.slogen}`,
+    description: siteConfig.description,
+    url: siteConfig.site,
+    siteName: siteConfig.name,
   },
   twitter: {
     card: "summary_large_image",
-    site: "@jullerino",
-    creator: "@jullerino",
+    site: "@meetqy",
+    creator: "@meetqy",
   },
 };
 
@@ -50,12 +54,6 @@ export const viewport: Viewport = {
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/github-dark.min.css"
-        ></link>
-      </head>
       <body
         className={cn(
           "flex min-h-screen flex-col bg-background font-sans text-foreground antialiased",

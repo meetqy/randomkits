@@ -3,7 +3,7 @@ export const siteConfig = {
   slogen: "Can’t Decide? Try Random Kits!",
   description:
     "We offer a variety of random generators to help you easily overcome decision fatigue.  Not sure what to choose?  Hit random, and find your answer in a click!",
-  site: "randomkits.com",
+  site: "https://randomkits.com",
   social: {
     github: "https://github.com/meetqy/randomkits",
     npm: "https://www.npmjs.com/org/randomkits",
