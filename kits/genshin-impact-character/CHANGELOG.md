@@ -1,5 +1,13 @@
 # @randomkits/genshin-impact-character
 
+## 0.0.5
+
+### Patch Changes
+
+- 29e313c: patch
+- Updated dependencies [29e313c]
+  - @randomkits/utils@0.0.3
+
 ## 0.0.4
 
 ### Patch Changes
