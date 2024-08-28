@@ -6,14 +6,14 @@ const host = `https://raw.githubusercontent.com/meetqy/randomkits/main/kits`;
 /**
  * Get the github raw url of the kit
  * @param kit kit name
- * @param name name or filename
+ * @param id name or filename or id
  * @returns github raw url
  */
-export const getAssetsSrc = (kit: string, name: string) => {
+export const getAssetsSrc = (kit: string, id: string) => {
   kit = formatTextToSlugify(kit);
-  name = formatTextToSlugify(name);
+  id = formatTextToSlugify(id);
 
-  return `${host}/${kit}/assets/images/${name}.webp`;
+  return `${host}/${kit}/assets/images/${id}.webp`;
 };
 
 export const getReadmeSrc = (kit: string) => {

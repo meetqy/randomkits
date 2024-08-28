@@ -5,7 +5,7 @@ import en from "../assets/data/en.json";
 import zh_hans from "../assets/data/zh-hans.json";
 import zh_hant from "../assets/data/zh-hant.json";
 
-type GenshinImpactCharacter = (typeof en)[number] & {
+export type GenshinImpactCharacter = (typeof en)[number] & {
   avatar: string;
   elementText: string;
 };
@@ -15,9 +15,12 @@ type Locale = keyof typeof locale;
 
 const GenshinImpactCharacter = {
   name: "Genshin Impact Character",
+  locales: locale,
+  count: en.length,
+  all: (language: Locale) => GenshinImpactCharacter.locales[language],
+
   slug: () => formatTextToSlugify(GenshinImpactCharacter.name),
 
-  locale,
   random({
     num = 6,
     language = "en",
@@ -25,7 +28,7 @@ const GenshinImpactCharacter = {
     num?: number;
     language: Locale;
   }): GenshinImpactCharacter[] {
-    const data = this.locale[language];
+    const data = this.locales[language];
 
     return randoms(data, num).map((item) => ({
       ...item,

@@ -15,14 +15,14 @@ export const PageTitle = ({
 }) => {
   return (
     <div className="mx-auto grid w-full gap-2">
-      <h2
+      <h1
         className={cn(
           "font-serif text-2xl font-semibold md:text-3xl",
           classNames?.title,
         )}
       >
         {title}
-      </h2>
+      </h1>
       {description && (
         <p className="leading-7 text-muted-foreground">{description}</p>
       )}

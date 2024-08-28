@@ -1,16 +1,23 @@
 import { ReactNode } from "react";
+import { MDXRemote } from "next-mdx-remote/rsc";
+
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@randomkits/ui/tabs";
 
 import { PageTitle } from "./page-title";
 
-export default function KitLayout({
+export default async function KitLayout({
   children,
-  readme,
+  introduce,
+  docs,
   title,
 }: {
   children: ReactNode;
-  readme: ReactNode;
+  introduce: ReactNode;
+  docs: string;
   title: string;
 }) {
+  docs = docs.replace("#", "##");
+
   return (
     <>
       <PageTitle title={`Random ${title} Generator`} />
@@ -21,7 +28,16 @@ export default function KitLayout({
 
       <div className="mt-8 rounded-md border bg-background px-4 py-8 lg:px-8">
         <article className="prose prose-rose max-w-full prose-h2:border-b prose-h2:pb-2">
-          {readme}
+          <Tabs defaultValue="introduce">
+            <TabsList>
+              <TabsTrigger value="introduce">Introduce</TabsTrigger>
+              <TabsTrigger value="docs">Docs</TabsTrigger>
+            </TabsList>
+            <TabsContent value="introduce">{introduce}</TabsContent>
+            <TabsContent value="docs">
+              <MDXRemote source={docs} />
+            </TabsContent>
+          </Tabs>
         </article>
       </div>
     </>
