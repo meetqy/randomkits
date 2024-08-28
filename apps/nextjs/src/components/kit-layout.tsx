@@ -8,15 +8,16 @@ import { PageTitle } from "./page-title";
 export default async function KitLayout({
   children,
   introduce,
-  docs,
   title,
+  remoteDocs: { readme, changelog },
 }: {
   children: ReactNode;
   introduce: ReactNode;
-  docs: string;
+  remoteDocs: { readme: string; changelog: string };
   title: string;
 }) {
-  docs = docs.replace("#", "##");
+  readme = readme.replace("#", "##");
+  changelog = changelog.replace("#", "##");
 
   return (
     <>
@@ -31,11 +32,15 @@ export default async function KitLayout({
           <Tabs defaultValue="introduce">
             <TabsList>
               <TabsTrigger value="introduce">Introduce</TabsTrigger>
-              <TabsTrigger value="docs">Docs</TabsTrigger>
+              <TabsTrigger value="readme">Readme</TabsTrigger>
+              <TabsTrigger value="changelog">Changelog</TabsTrigger>
             </TabsList>
             <TabsContent value="introduce">{introduce}</TabsContent>
-            <TabsContent value="docs">
-              <MDXRemote source={docs} />
+            <TabsContent value="readme">
+              <MDXRemote source={readme} />
+            </TabsContent>
+            <TabsContent value="changelog">
+              <MDXRemote source={changelog} />
             </TabsContent>
           </Tabs>
         </article>
