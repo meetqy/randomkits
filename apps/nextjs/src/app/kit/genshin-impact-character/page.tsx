@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { Image } from "@nextui-org/image";
 
 import GenshinImpactCharacter from "@randomkits/genshin-impact-character";
-import { getAssetsSrc, getReadmeSrc } from "@randomkits/utils";
+import { getAssetsSrc, getChangelogSrc, getReadmeSrc } from "@randomkits/utils";
 
 import KitLayout from "~/components/kit-layout";
 import { NAME } from "./constant";
@@ -15,13 +15,19 @@ export const metadata: Metadata = {
 };
 
 export default async function GenshinImpactCharacterPage() {
-  const res = await fetch(getReadmeSrc(NAME));
-  const docs = await res.text();
+  const [readme, changelog] = await Promise.all([
+    fetch(getReadmeSrc(NAME)),
+    fetch(getChangelogSrc(NAME)),
+  ]);
+  const docs = {
+    readme: await readme.text(),
+    changelog: await changelog.text(),
+  };
 
   return (
     <KitLayout
       title={NAME}
-      docs={docs}
+      remoteDocs={docs}
       introduce={
         <>
           <IntroduceMDX />
