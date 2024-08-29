@@ -1,5 +1,11 @@
 # @randomkits/utils
 
+## 0.1.0
+
+### Minor Changes
+
+- 054f6c4: publish
+
 ## 0.0.3
 
 ### Patch Changes

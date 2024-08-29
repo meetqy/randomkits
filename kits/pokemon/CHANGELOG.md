@@ -1,5 +1,13 @@
 # @randomkits/pokemon
 
+## 0.1.2
+
+### Patch Changes
+
+- 054f6c4: publish
+- Updated dependencies [054f6c4]
+  - @randomkits/utils@0.1.0
+
 ## 0.1.1
 
 ### Patch Changes
