@@ -11,7 +11,7 @@ import { getAssetsSrc } from "@randomkits/utils";
 import { NAME } from "./constant";
 
 type Result = ReturnType<typeof Pokemon.random>;
-const max = Pokemon.count;
+const max = Pokemon.count > 100 ? 100 : Pokemon.count;
 
 export const Generator = () => {
   const [result, setResult] = useState<Result>([]);
@@ -54,7 +54,29 @@ export const Generator = () => {
       </Button>
 
       <h3 className="text-lg font-medium">Result</h3>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"></div>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+        {result.map((item) => {
+          return (
+            <div
+              key={item.num}
+              className="relative flex flex-col items-center justify-center"
+            >
+              <Image
+                src={getAssetsSrc(NAME, item.img.normal)}
+                alt={item.name}
+                className="h-32 w-32 bg-muted"
+              />
+              <div className="grid w-full text-center text-sm">
+                <p className="font-mono text-muted-foreground">{item.num}</p>
+                <p className="text-base font-medium text-primary">
+                  {item.name}
+                </p>
+                <p className="text-secondary-foreground">{item.type}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -11,4 +11,4 @@ export const siteConfig = {
   },
 };
 
-export const kits = ["Genshin Impact Character"];
+export const kits = ["Genshin Impact Character", "Pokemon"];

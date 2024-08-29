@@ -1,0 +1,14 @@
+table img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0 !important;
+}
+
+table th {
+  @apply !p-0 !font-bold;
+}
+
+table td {
+  @apply !align-middle !p-0;
+}

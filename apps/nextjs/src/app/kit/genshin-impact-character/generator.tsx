@@ -11,7 +11,8 @@ import { getAssetsSrc } from "@randomkits/utils";
 import { NAME } from "./constant";
 
 type Result = ReturnType<typeof GenshinImpactCharacter.random>;
-const max = GenshinImpactCharacter.count;
+const max =
+  GenshinImpactCharacter.count > 100 ? 100 : GenshinImpactCharacter.count;
 
 export const Generator = () => {
   const [result, setResult] = useState<Result>([]);
