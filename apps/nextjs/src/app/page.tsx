@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@randomkits/ui/card";
+import { Card, CardHeader, CardTitle } from "@randomkits/ui/card";
 
 import { PageTitle } from "~/components/page-title";
 import { kits } from "~/config/siteConfig";

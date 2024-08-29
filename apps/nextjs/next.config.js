@@ -19,6 +19,7 @@ const nextConfig = {
     "@randomkits/ui",
     "@randomkits/utils",
     "@randomkits/genshin-impact-character",
+    "@randomkits/pokemon",
   ],
 
   /** We already do linting and typechecking as separate tasks in CI */

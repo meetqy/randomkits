@@ -23,7 +23,7 @@ import IntroduceMDX from "./introduce.mdx";
 
 export const metadata: Metadata = {
   title: `Random ${NAME} Generator`,
-  description: `Instantly generate a random $ with just one click!`,
+  description: `Instantly generate a random ${NAME} with just one click!`,
 };
 
 export default async function DogBreedPage() {
