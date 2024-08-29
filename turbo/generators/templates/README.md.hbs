@@ -1,23 +1,23 @@
-# Random {{ name }} Generator
+# Random {{ titleCase name }} Generator
 
 > Online Example: [RandomKits](https://randomkits.com) - Can’t Decide? Try Random Kits!
 
-Random get genshin impact character data, The data is a JSON file and can be used wherever.
+Random get **{{ titleCase name }}** data, The data is a JSON file and can be used wherever.
 
 ## Install
 
 ```shell
-npm install @randomkits/genshin-impact-character
+npm install @randomkits/{{name}}
 
-yarn add @randomkits/genshin-impact-character
+yarn add @randomkits/{{name}}
 
-pnpm add @randomkits/genshin-impact-character
+pnpm add @randomkits/{{name}}
 ```
 
 ## Interface
 
 ```ts
-interface GenshinImpactCharacter {
+interface {{properCase name}} {
   name: string;
   element: string;
   // element language text
@@ -31,19 +31,19 @@ interface GenshinImpactCharacter {
 ## Usage
 
 ```js
-import GenshinImpactCharacter from "@randomkits/genshin-impact-character";
+import {{ properCase name }} from "@randomkits/{{ name }}";
 
 // simple
-GenshinImpactCharacter.random();
-// => GenshinImpactCharacter[]
+{{ properCase name }}.random();
+// => {{ properCase name }}[]
 
 // random number default => {num: 6, language: "en"}
-GenshinImpactCharacter.random({ num: 6, language: "en" });
+{{ properCase name }}.random({ num: 6, language: "en" });
 ```
 
 ## Api
 
-### GenshinImpactCharacter.random(\{num?, language?\})
+### {{ properCase name }}.random(\{num?, language?\})
 
 Get Random {{ name }}.
 
@@ -59,7 +59,7 @@ Get Random {{ name }}.
 
 ## Supported languages
 
-`@randomkits/genshin-impact-character` are available for the following languages:
+`@randomkits/{{ name }}` are available for the following languages:
 
 - de (German)
 - en (English)
@@ -80,10 +80,10 @@ Get Random {{ name }}.
 
 ## Examples
 
-- [random genshin impact character generator](https://randomkits.com/kit/random-genshin-impact-character-generator/)
+- [random genshin impact character generator](https://randomkits.com/kit/random-{{ name }}-generator/)
 - [random pokemon generator](https://randomkits.com/kit/random-pokemon-generator/)
 
 ## Packages
 
-- [@randomkits/genshin-impact-character](https://www.npmjs.com/package/@randomkits/genshin-impact-character)
+- [@randomkits/{{ name }}](https://www.npmjs.com/package/@randomkits/{{ name }})
 - [@randomkits/pokemon](https://www.npmjs.com/package/@randomkits/pokemon)
