@@ -96,6 +96,9 @@ importers:
       '@randomkits/genshin-impact-character':
         specifier: workspace:*
         version: link:../../kits/genshin-impact-character
+      '@randomkits/pokemon':
+        specifier: workspace:*
+        version: link:../../kits/pokemon
       '@randomkits/ui':
         specifier: workspace:*
         version: link:../../packages/ui
