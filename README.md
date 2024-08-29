@@ -31,3 +31,13 @@ pnpm ui-add {component}
 ## Date Rules
 
 - image format => `256x256`/`.webp`, image src => `Utils.getAssetsSrc(id)`
+
+## Assets CDN
+
+### unpkg
+
+https://unpkg.com/@randomkits/genshin-impact-character@0.0.5/assets/images/albedo.webp
+
+### github
+
+https://raw.githubusercontent.com/meetqy/randomkits/main/kits/genshin-impact-character/assets/images/albedo.webp
