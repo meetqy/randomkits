@@ -41,5 +41,8 @@
     "typescript": "catalog:",
     "tsup": "catalog:"
   },
+  "dependencies": {
+    "@randomkits/utils": "workspace:*"
+  },
   "prettier": "@randomkits/prettier-config"
 }
