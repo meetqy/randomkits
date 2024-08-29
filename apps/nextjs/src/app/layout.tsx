@@ -5,7 +5,7 @@ import { GeistSans } from "geist/font/sans";
 import { ProxyAgent, setGlobalDispatcher } from "undici";
 
 import { cn } from "@randomkits/ui";
-import { ThemeProvider, ThemeToggle } from "@randomkits/ui/theme";
+import { ThemeProvider } from "@randomkits/ui/theme";
 import { Toaster } from "@randomkits/ui/toast";
 
 import "~/app/globals.css";
@@ -67,9 +67,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
             <main className="container py-8">{props.children}</main>
           </div>
           <Footer />
-          <div className="fixed bottom-4 right-4">
-            <ThemeToggle />
-          </div>
+          <div className="fixed bottom-4 right-4">{/* <ThemeToggle /> */}</div>
 
           <Toaster />
         </ThemeProvider>
