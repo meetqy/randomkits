@@ -33,6 +33,13 @@ const config = {
   importOrderTypeScriptVersion: "4.4.0",
   overrides: [
     {
+      files: "**/data/*.json",
+      options: {
+        parser: "json",
+        printWidth: 10000,
+      },
+    },
+    {
       files: "*.json.hbs",
       options: {
         parser: "json",
