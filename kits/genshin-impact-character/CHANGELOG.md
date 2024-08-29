@@ -5,6 +5,7 @@
 ### Minor Changes
 
 - 054f6c4: publish
+- 8e18e2a: add preview assets
 
 ### Patch Changes
 

@@ -5,6 +5,7 @@
 ### Patch Changes
 
 - 054f6c4: publish
+- b776f9e: Add Pokemon assets
 - Updated dependencies [054f6c4]
   - @randomkits/utils@0.1.0
 
