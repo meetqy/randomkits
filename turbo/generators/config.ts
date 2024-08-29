@@ -17,6 +17,7 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         name: "dir",
         message: "Choose directory?",
         choices: ["kits", "packages"],
+        default: "kits",
       },
       {
         type: "input",
@@ -59,6 +60,26 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
         type: "add",
         path: "{{dir}}/{{ name }}/tsconfig.json",
         templateFile: "templates/tsconfig.json.hbs",
+      },
+      {
+        type: "add",
+        path: "apps/nextjs/src/app/kit/{{ name }}/constant.ts",
+        templateFile: "templates/nextjs/constant.ts.hbs",
+      },
+      {
+        type: "add",
+        path: "apps/nextjs/src/app/kit/{{ name }}/introduce.mdx",
+        templateFile: "templates/nextjs/introduce.mdx.hbs",
+      },
+      {
+        type: "add",
+        path: "apps/nextjs/src/app/kit/{{ name }}/generator.tsx",
+        templateFile: "templates/nextjs/generator.tsx.hbs",
+      },
+      {
+        type: "add",
+        path: "apps/nextjs/src/app/kit/{{ name }}/page.tsx",
+        templateFile: "templates/nextjs/page.tsx.hbs",
       },
       {
         type: "add",

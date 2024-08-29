@@ -39,7 +39,13 @@ const config = {
       },
     },
     {
-      files: "*.md.hbs",
+      files: "*.ts(x).hbs",
+      options: {
+        parser: "typescript",
+      },
+    },
+    {
+      files: "*.md(x).hbs",
       options: {
         parser: "markdown",
       },
