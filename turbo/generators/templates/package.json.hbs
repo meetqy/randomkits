@@ -1,9 +1,18 @@
 {
   "name": "@randomkits/{{ name }}",
+  "description": "Random Kits - Random {{name}} Generator Data Module And Random Function.",
   "private": false,
   "version": "0.0.1",
   "type": "module",
-  "files": ["dist/**"],
+  "keywords": [
+    "random",
+    "randomkits",
+    "random kits",
+    "generator",
+    "{{name}} character",
+    "random {{name}} generator"
+  ],
+  "files": ["dist/**", "asstes/**"],
   "exports": {
     ".": "./src/index.ts"
   },
@@ -36,6 +45,9 @@
     "prettier": "catalog:",
     "typescript": "catalog:",
     "tsup": "catalog:"
+  },
+  "dependencies": {
+    "@randomkits/utils": "workspace:*"
   },
   "prettier": "@randomkits/prettier-config"
 }

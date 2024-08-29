@@ -52,6 +52,11 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
       },
       {
         type: "add",
+        path: "{{dir}}/{{ name }}/README.md",
+        template: "templates/README.md.hbs",
+      },
+      {
+        type: "add",
         path: "{{dir}}/{{ name }}/tsconfig.json",
         templateFile: "templates/tsconfig.json.hbs",
       },

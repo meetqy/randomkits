@@ -39,6 +39,12 @@ const config = {
       },
     },
     {
+      files: "*.md.hbs",
+      options: {
+        parser: "markdown",
+      },
+    },
+    {
       files: "*.js.hbs",
       options: {
         parser: "babel",
