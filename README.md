@@ -28,9 +28,10 @@ In the turbo/generators/templates directory, you can modify the preset templates
 pnpm ui-add {component}
 ```
 
-## Date Rules
+## Rules
 
 - image format => `256x256`/`.webp`, image src => `Utils.getAssetsSrc(id)`
+- preview image => `1230x810`
 
 ## Assets CDN
 
