@@ -15,4 +15,5 @@ export const kits = [
   "Genshin Impact Character",
   "Pokemon",
   "China Phone Number",
+  "Black Myth Wukong Boss",
 ];

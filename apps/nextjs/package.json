@@ -21,6 +21,7 @@
     "@nextui-org/image": "^2.0.31",
     "@randomkits/china-phone-number": "workspace:*",
     "@randomkits/genshin-impact-character": "workspace:*",
+    "@randomkits/black-myth-wukong-boss": "workspace:*",
     "@randomkits/pokemon": "workspace:*",
     "@randomkits/ui": "workspace:*",
     "@randomkits/utils": "workspace:*",
