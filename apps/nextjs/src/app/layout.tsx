@@ -2,11 +2,11 @@ import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
+import { Toaster } from "react-hot-toast";
 import { ProxyAgent, setGlobalDispatcher } from "undici";
 
 import { cn } from "@randomkits/ui";
 import { ThemeProvider } from "@randomkits/ui/theme";
-import { Toaster } from "@randomkits/ui/toast";
 
 import "~/app/globals.css";
 
