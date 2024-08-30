@@ -40,5 +40,12 @@ export function randoms<T>(arr: T[], num: number) {
   return sampleSize(arr, num);
 }
 
-export const formatTextToSlugify = (text: string) =>
-  slugify(text, { lower: true, remove: /[*+~.()'"!:@]/g });
+export const formatTextToSlugify = (text: string) => {
+  const index = text.indexOf("元");
+  let result = slugify(text, { lower: true, remove: /[*+~.()'"!:@]/g });
+  if (index > -1) {
+    result = result.replace("yuan", "元");
+  }
+
+  return result;
+};
