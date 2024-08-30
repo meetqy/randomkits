@@ -37,15 +37,15 @@ import BlackMythWukongBoss from "@randomkits/black-myth-wukong-boss";
 BlackMythWukongBoss.random();
 // => BlackMythWukongBoss[]
 
-// random number default => {num: 6, language: "en"}
-BlackMythWukongBoss.random({ num: 6, language: "en" });
+// random number default => {num: 6, language: "zh-hans"}
+BlackMythWukongBoss.random({ num: 6, language: "zh-hans" });
 ```
 
 ## Api
 
 ### BlackMythWukongBoss.random(\{num?, language?\})
 
-Get Random black-myth-wukong-boss.
+Get Random Black Myth Wukong Boss.
 
 #### num
 
@@ -55,7 +55,7 @@ Get Random black-myth-wukong-boss.
 #### language
 
 - Type: `string`
-- Default: `en`
+- Default: `zh-hans`
 
 ## Supported languages
 
