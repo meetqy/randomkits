@@ -3,6 +3,8 @@ import slugify from "slugify";
 
 const host = `https://raw.githubusercontent.com/meetqy/randomkits/main/kits`;
 
+export { random, sampleSize } from "lodash-es";
+
 /**
  * Get the github raw url of the kit
  * @param kit kit name
@@ -28,6 +30,12 @@ export const getChangelogSrc = (kit: string) => {
   return `${host}/${kit}/CHANGELOG.md`;
 };
 
+/**
+ * @deprecated use sampleSize same as loadash.sampleSize
+ * @param arr
+ * @param num
+ * @returns
+ */
 export function randoms<T>(arr: T[], num: number) {
   return sampleSize(arr, num);
 }
