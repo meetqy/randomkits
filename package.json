@@ -22,13 +22,13 @@
     "pkg-add": "turbo gen init"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.7",
     "@randomkits/prettier-config": "workspace:*",
     "@turbo/gen": "^2.0.13",
     "prettier": "catalog:",
     "tsup": "catalog:",
-    "turbo": "^2.0.14",
-    "typescript": "catalog:",
-    "@changesets/cli": "^2.27.7"
+    "turbo": "^2.1.0",
+    "typescript": "catalog:"
   },
   "prettier": "@randomkits/prettier-config"
 }
