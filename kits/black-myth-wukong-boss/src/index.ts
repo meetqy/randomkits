@@ -16,7 +16,7 @@ const BlackMythWukongBoss = {
 
   random({
     num = 6,
-    language = "zh_hans",
+    language = "zh-hans",
   }: {
     num?: number;
     language: Locale;

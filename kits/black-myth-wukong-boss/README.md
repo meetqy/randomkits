@@ -72,6 +72,10 @@ Get Random black-myth-wukong-boss.
 - zh-Hans (Simplified Chinese)
 - zh-Hant (Traditional Chinese)
 
+## Thanks
+
+Data Source: https://wiki.biligame.com/wukong/%E6%95%8C%E4%BA%BA
+
 ---
 
 ## Issues
