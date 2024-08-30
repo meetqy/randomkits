@@ -58,7 +58,7 @@ export const Generator = () => {
         {result.map((item, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-center gap-2"
+            className="relative flex flex-col items-center gap-2 bg-muted"
           >
             <Image
               removeWrapper
