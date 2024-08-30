@@ -28,10 +28,8 @@
     "prettier": "catalog:",
     "tsup": "catalog:",
     "turbo": "^2.1.0",
-    "typescript": "catalog:"
-  },
-  "prettier": "@randomkits/prettier-config",
-  "dependencies": {
+    "typescript": "catalog:",
     "@changesets/changelog-git": "^0.2.0"
-  }
+  },
+  "prettier": "@randomkits/prettier-config"
 }
