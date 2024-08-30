@@ -1,0 +1,56 @@
+{
+  "name": "@randomkits/china-phone-number",
+  "description": "Random Kits - Random China Phone Number Generator Data Module And Random Function.",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "keywords": [
+    "random",
+    "randomkits",
+    "random kits",
+    "generator",
+    "china-phone-number character",
+    "random china-phone-number generator"
+  ],
+  "files": [
+    "dist/**",
+    "asstes/**"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "license": "AGPL-3.0",
+  "author": "meetqy <meetqy@icloud.com>",
+  "homepage": "https://randomkits.com",
+  "bugs": {
+    "url": "https://github.com/meetqy/randomkits/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meetqy/randomkits.git"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@randomkits/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@randomkits/eslint-config": "workspace:*",
+    "@randomkits/prettier-config": "workspace:*",
+    "@randomkits/tsconfig": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "prettier": "@randomkits/prettier-config"
+}
