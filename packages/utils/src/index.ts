@@ -4,6 +4,7 @@ import slugify from "slugify";
 const host = `https://raw.githubusercontent.com/meetqy/randomkits/main/kits`;
 
 export { random, sampleSize } from "lodash-es";
+export { slugify };
 
 /**
  * Get the github raw url of the kit
