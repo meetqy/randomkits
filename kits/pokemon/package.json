@@ -46,8 +46,8 @@
     "@randomkits/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "typescript": "catalog:",
-    "tsup": "catalog:"
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "dependencies": {
     "@randomkits/utils": "workspace:*"

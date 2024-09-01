@@ -39,17 +39,17 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
+  "dependencies": {
+    "@randomkits/utils": "workspace:*"
+  },
   "devDependencies": {
     "@randomkits/eslint-config": "workspace:*",
     "@randomkits/prettier-config": "workspace:*",
     "@randomkits/tsconfig": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "typescript": "catalog:",
-    "tsup": "catalog:"
-  },
-  "dependencies": {
-    "@randomkits/utils": "workspace:*"
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "prettier": "@randomkits/prettier-config"
 }
