@@ -13,6 +13,13 @@ const { Title } = Typography;
 
 const tools = [
   {
+    title: "Random Animal",
+    description:
+      "Generate random animal data with types, names, breeds, ages and colors",
+    path: "/animal",
+    features: ["Types", "Names", "Breeds", "Ages", "Colors"],
+  },
+  {
     title: "Random Airline",
     description:
       "Generate random airline flight data with routes, prices and status",
@@ -39,7 +46,7 @@ export const Tools = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="gap-8 md:columns-2 lg:columns-3">
           {tools.map((tool) => (
             <ToolCard key={tool.path} {...tool} />
           ))}

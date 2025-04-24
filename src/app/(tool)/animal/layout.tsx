@@ -7,7 +7,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Breadcrumb
         items={[
           { title: <Link href="/">Home</Link> },
-          { title: "Airline" },
+          { title: "Animal" },
           { title: "Table" },
         ]}
       />
