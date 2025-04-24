@@ -1,10 +1,6 @@
 "use client";
-import { Button, ConfigProvider, Table, theme, Typography } from "antd";
 import { faker } from "@faker-js/faker";
-import { useCallback, useState, useRef } from "react";
-import { useReactToPrint } from "react-to-print";
-
-const { Title } = Typography;
+import { TableClientPage } from "~/components/table-client-page";
 
 interface AnimalData {
   key: string;
@@ -92,48 +88,11 @@ const columns = [
 ];
 
 export function AnimalClient() {
-  const [data, setData] = useState<AnimalData[]>(generateData());
-  const componentRef = useRef<HTMLDivElement>(null);
-  const [isPrinting, setIsPrinting] = useState(false);
-
-  const handleRefresh = useCallback(() => {
-    setData(generateData());
-  }, []);
-
-  const handlePrint = useReactToPrint({
-    contentRef: componentRef,
-    onBeforePrint: () => {
-      setIsPrinting(true);
-      return Promise.resolve();
-    },
-    onAfterPrint: () => {
-      setIsPrinting(false);
-    },
-  });
-
   return (
-    <div className="py-6">
-      <div className="mb-6 flex items-center justify-between">
-        <Title level={1}>Random Animal Information Table</Title>
-        <div className="space-x-4">
-          <Button onClick={handleRefresh} type="primary">
-            Generate New Data
-          </Button>
-          <Button onClick={() => handlePrint()}>Print Table</Button>
-        </div>
-      </div>
-
-      <div ref={componentRef}>
-        <ConfigProvider theme={{ algorithm: theme.compactAlgorithm }}>
-          <Table
-            sticky={!!isPrinting}
-            columns={columns}
-            dataSource={data}
-            pagination={false}
-            bordered
-          />
-        </ConfigProvider>
-      </div>
-    </div>
+    <TableClientPage
+      title="Random Airline Information Table"
+      columns={columns}
+      generateData={generateData}
+    />
   );
 }
