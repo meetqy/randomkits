@@ -1,44 +1,29 @@
-# RandomKits
+# Create T3 App
 
-A random generator with preset scenarios to help you overcome choice anxiety.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-> Online Example: [RandomKits](https://randomkits.com) - Can’t Decide? Try Random Kits!
+## What's next? How do I make an app with this?
 
-## Developer
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-### How to publish to npm
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
-```sh
-pnpm changeset
-pnpm changeset version
-pnpm changeset publish
-```
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
 
-### How to add new package
+## Learn More
 
-```sh
-pnpm pkg-add
-```
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
-In the turbo/generators/templates directory, you can modify the preset templates.
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
-### How to add `shadcn/ui` components
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-```sh
-pnpm ui-add {component}
-```
+## How do I deploy this?
 
-## Rules
-
-- image format => `256x256`/`.webp`, image src => `Utils.getAssetsSrc(id)`
-- preview image => `1230x810`
-
-## Assets CDN
-
-### unpkg
-
-https://unpkg.com/@randomkits/genshin-impact-character@0.0.5/assets/images/albedo.webp
-
-### github
-
-https://raw.githubusercontent.com/meetqy/randomkits/main/kits/genshin-impact-character/assets/images/albedo.webp
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
