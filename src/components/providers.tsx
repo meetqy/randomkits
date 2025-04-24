@@ -8,9 +8,9 @@ export const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <AntdRegistry>
       <ConfigProvider
-        theme={{
-          algorithm: theme.compactAlgorithm,
-        }}
+      // theme={{
+      //   algorithm: theme.compactAlgorithm,
+      // }}
       >
         {children}
       </ConfigProvider>

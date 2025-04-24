@@ -1,5 +1,5 @@
 "use client";
-import { Button, Table, Typography } from "antd";
+import { Button, ConfigProvider, Table, theme, Typography } from "antd";
 import { faker } from "@faker-js/faker";
 import { useCallback, useState } from "react";
 import { useReactToPrint } from "react-to-print";
@@ -94,7 +94,7 @@ export function AirlineClient() {
   });
 
   return (
-    <div className="p-6">
+    <div className="py-6">
       <div className="mb-6 flex items-center justify-between">
         <Title level={1}>Random Airline Information Table</Title>
         <div className="space-x-4">
@@ -106,12 +106,19 @@ export function AirlineClient() {
       </div>
 
       <div ref={componentRef}>
-        <Table
-          columns={columns}
-          dataSource={data}
-          pagination={false}
-          bordered
-        />
+        <ConfigProvider
+          theme={{
+            algorithm: theme.compactAlgorithm,
+          }}
+        >
+          <Table
+            sticky
+            columns={columns}
+            dataSource={data}
+            pagination={false}
+            bordered
+          />
+        </ConfigProvider>
       </div>
     </div>
   );
