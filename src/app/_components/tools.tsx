@@ -13,7 +13,7 @@ const { Title } = Typography;
 
 const tools = [
   {
-    title: "Random Airline Table",
+    title: "Random Airline",
     description:
       "Generate random airline flight data with routes, prices and status",
     path: "/airline",
