@@ -84,6 +84,7 @@ const columns = [
 export function AirlineClient() {
   const [data, setData] = useState<AirlineData[]>(generateData());
   const componentRef = useRef<HTMLDivElement>(null);
+  const [isPrinting, setIsPrinting] = useState(false);
 
   const handleRefresh = useCallback(() => {
     setData(generateData());
@@ -91,6 +92,13 @@ export function AirlineClient() {
 
   const handlePrint = useReactToPrint({
     contentRef: componentRef,
+    onBeforePrint: () => {
+      setIsPrinting(true);
+      return Promise.resolve();
+    },
+    onAfterPrint: () => {
+      setIsPrinting(false);
+    },
   });
 
   return (
@@ -106,13 +114,9 @@ export function AirlineClient() {
       </div>
 
       <div ref={componentRef}>
-        <ConfigProvider
-          theme={{
-            algorithm: theme.compactAlgorithm,
-          }}
-        >
+        <ConfigProvider theme={{ algorithm: theme.compactAlgorithm }}>
           <Table
-            sticky
+            sticky={!!isPrinting}
             columns={columns}
             dataSource={data}
             pagination={false}
