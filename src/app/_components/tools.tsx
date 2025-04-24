@@ -16,14 +16,14 @@ const tools = [
     title: "Random Animal",
     description:
       "Generate random animal data with types, names, breeds, ages and colors",
-    path: "/animal",
+    path: "/animal/table",
     features: ["Types", "Names", "Breeds", "Ages", "Colors"],
   },
   {
     title: "Random Airline",
     description:
       "Generate random airline flight data with routes, prices and status",
-    path: "/airline",
+    path: "/airline/table",
     features: ["Tables", "Routes", "Prices", "Status"],
   },
 ];
