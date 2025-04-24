@@ -90,7 +90,7 @@ const columns = [
 export function AnimalClient() {
   return (
     <TableClientPage
-      title="Random Airline Information Table"
+      title="Random Animal Information Table"
       columns={columns}
       generateData={generateData}
     />
